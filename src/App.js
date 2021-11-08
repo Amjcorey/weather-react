@@ -1,25 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>
-          Hello World 
-        </h1>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import "./App.css";
+
+export default function App() {
+    return (
+        <div className="App">
+            Weather app
+            <footer>
+                Coded by Amanda Corey and is {""}
+                <a href="https://github.com/Amjcorey/weather-react" target="_blank">open-sourced</a> on GitHub.
+            </footer>
+        </div>
+    );
 }
-
-export default App;
