@@ -1,77 +1,46 @@
-import React, { useState } from "react";
-import axios from "axios";
-import "./styles.css";
+import React from "react";
+import "./Weather.css";
 
-function WeatherSearch() {
-  const [temperature, setTemperature] = useState(null);
-  const [humidity, setHumidity] = useState(null);
-  const [wind, setWind] = useState(null);
-  const [city, setCity] = useState(null);
-  const [description, setDescription] = useState(null);
-  const [icon, setIcon] = useState(null);
-
-  function displayCity(event) {
-    setCity(event.target.value);
-  }
-
-  function handleSubmit(event) {
-    event.preventDefault();
-
-    let apiKey = "70de72ce25d0801c193edd1d17ced422";
-    let units = "metric";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-
-    axios.get(apiUrl).then(displayWeather);
-  }
-
-  function displayWeather(response) {
-    setTemperature(Math.round(response.data.main.temp));
-    setDescription(response.data.weather[0].description);
-    setWind(Math.round(response.data.wind.speed));
-    setHumidity(response.data.main.humidity);
-    setIcon(
-      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-    );
-  }
-
-  let form = (
-    <div className="container">
-      <form className="form" onSubmit={handleSubmit}>
-        <input
-          type="search"
-          placeholder="Enter a city"
-          className="form-control"
-          onChange={displayCity}
-        />
-
-        <input type="button" value="Search" className="btn btn-primary" />
+export default function Weather() {
+  return (
+    <div className="Weather">
+      <form>
+        <div className="row">
+          <div className="col-9">
+            <input
+              type="search"
+              placeholder="Search City"
+              className="form-control" />
+          </div>
+          <div className="col-3">
+            <input
+              type="submit"
+              placeholder="Search"
+              className="btn btn-primary" />
+          </div>
+        </div>
       </form>
-    </div>
-  );
-
-  if (temperature) {
-    return (
-      <div className="Weather">
-        <h1>Weather App</h1>
-        {form}
-        <br />
+      <h1>Seattle</h1>
+      <ul>
+        <li>Sunday 07:00</li>
+        <li>Rain</li>
+      </ul>
+      <div className="row">
+        <div className="col-6">
+          <img
+            src="https://ssl.gstatic.com/onebox/weather/64/rain.png"
+            alt="rain"
+          />
+          42°F
+        </div>
+      <div className="col-6">
         <ul>
-          <li>Temperature: {temperature}°C</li>
-          <li>Description: {description}</li>
-          <li>Wind: {wind} km</li>
-          <li>Humidity: {humidity}% </li>
-          <li>
-            <img src={icon} alt="icon" />
-          </li>
+          <li>Precipitation: 86%</li>
+          <li>Wind: 9 mph</li>
+          <li>Humidity: 88%</li>
         </ul>
       </div>
-    );
-  } else {
-    return (
-      <div>
-        <h1> Weather App </h1>
-        {form}
-      </div>
-    );
-  }
+     </div>
+    </div>
+  );
 }
