@@ -4,21 +4,23 @@ import "./App.css";
 
 export default function App() {
   return (
-    <div className="App">
-      <div className="container">
-        <div className="main">
+    <div>
+      <div className="App">
+        <div className="container">
+
           <Weather />
-          </div>
-         <footer>
-                Coded by Amanda Corey,{" "}
-            <a
-            rel="noreferrer"
-            href="https://github.com/Amjcorey/weather-react" target="_blank">
-            open-sourced
-            </a>{" "}
-            on GitHub.
-          </footer>
-        </div> 
+
+        </div>
       </div>
+      <footer>
+        Coded by Amanda Corey,{" "}
+        <a
+          rel="noreferrer"
+          href="https://github.com/Amjcorey/weather-react" target="_blank">
+          open-sourced
+        </a>{" "}
+        on GitHub.
+      </footer>
+    </div>
     );
 }
