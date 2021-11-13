@@ -1,46 +1,27 @@
+.Weather {
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 18px;
+  max-width: 720px;
+  margin: 0 auto;
 
-.Weather .form-control {
-  border: 2px solid #f0f0f0;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-  padding: 8px 10px;
-  margin-right: 10px;
   text-align: center;
 }
 
-.Weather .btn-primary {
+.Weather .date-time {
+  font-size: 14px;
+  background: #668a8a;
   color: white;
-  background-color: #096879;
-  border: 2px solid #096879;
-  border-radius: 15px;
-  font-size: 16px;
-  padding: 8px 10px;
-}
-
-.Weather ul {
-  list-style-type: none;
-  text-align: center;
-}
-
-.container .citySearch {
+  border-radius: 18px 18px 0 0;
   padding: 10px;
+  line-height: 1.6;
 }
 
-h1 {
-  text-align: center;
-  color: black;
-  margin-top: 10px;
-  font-weight: 500;
-  font-size: 42px;
+.Weather .WeatherInfo {
+  padding: 20px;
 }
 
-.Weather .temperature {
-  font-size: 30px;
-  padding-left: 10px;
-  padding-top: 20px;
-}
-
-.Weather .moon_img {
-  margin-bottom: 40px;
+.Weather h1 {
+  font-size: 38px;
+  font-weight: 100;
 }
