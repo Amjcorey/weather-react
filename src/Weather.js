@@ -4,7 +4,7 @@ import "./Weather.css";
 export default function Weather() {
   return (
     <div className="Weather">
-      <div className="card">
+      <div className="container">
         <div className="date-time">
           <div className="date">Sunday</div>
           <div className="time">12:00 AM </div>
@@ -29,7 +29,7 @@ export default function Weather() {
           <input
             type="search"
             value="i.e. Seattle"
-            className="form-control-search"
+            className="form-control input-search"
           />
           </div>
           <div className="p-2">
