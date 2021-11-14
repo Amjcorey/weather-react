@@ -1,23 +1,37 @@
 import React from "react";
+// import axios from "axios";
 import "./Weather.css";
 
+
+
 export default function Weather() {
+
+  
+
+
+  
   return (
     <div className="Weather">
-      <div className="container">
+      
         <div className="date-time">
-          <div className="date">Sunday</div>
-          <div className="time">12:00 AM </div>
+          <ul>
+            <li>
+            <div>Sunday 12:00 AM</div>
+            </li>
+          </ul>
+          
         </div>
         <div className="WeatherInfo">
           <div className="row">
-            <h2>Mostly Cloudy</h2>
+          <h1>Seattle</h1>
+            <div>
             <img
-              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-              alt="Mostly cloudy"
+              src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png"
+              alt="Light rain showers"
             />
-            <h1>Seattle</h1>
-            <div className="temperature-container">
+            </div>
+            <h2>Light rain showers</h2>
+            <div className="WeatherTemp">
               <span className="temperature">46</span>
               <span className="unit">°C</span>
             </div>
@@ -41,7 +55,7 @@ export default function Weather() {
           </div>
           </div>
         </form>
-      </div>
+      
     </div>
   );
-}
+} 
