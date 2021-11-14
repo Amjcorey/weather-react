@@ -11,12 +11,16 @@
   list-style-type: none;
 }
 
+.Weather h2 {
+  text-transform: uppercase;
+}
+
 .Weather .date-time {
   font-size: 14px;
   background: #668a8a;
   color: white;
   border-radius: 18px 18px 0 0;
-  padding: 10px;
+  
   line-height: 1.6;
   
 }
