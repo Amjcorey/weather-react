@@ -81,7 +81,7 @@ function search() {
 
       </div>
       < WeatherInfo />
-      <div className="WeatherForecast"></div>
+      
     </div>
   );
   } else {
