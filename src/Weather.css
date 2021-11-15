@@ -1,4 +1,4 @@
-.Weather {
+.WeatherApp {
   box-sizing: border-box;
   border: 1px solid black;
   border-radius: 18px;
@@ -7,29 +7,38 @@
   text-align: center;
 }
 
-.Weather ul {
+.WeatherApp form {
+  display: block;
+  padding: 16px;
+}
+
+.WeatherApp ul {
   list-style-type: none;
 }
 
-.Weather h2 {
+.WeatherApp h2 {
   text-transform: uppercase;
 }
 
-.Weather .date-time {
+.WeatherApp .date-time {
   font-size: 14px;
   background: #668a8a;
   color: white;
-  border-radius: 18px 18px 0 0;
-  
   line-height: 1.6;
-  
 }
 
-.Weather .WeatherInfo {
+.WeatherApp .WeatherInfo {
   padding: 20px;
 }
 
-.Weather h1 {
+.WeatherApp h1 {
   font-size: 38px;
   font-weight: 100;
+}
+
+
+
+.WeatherApp .form-control {
+  display: block;
+  width: 100%;
 }

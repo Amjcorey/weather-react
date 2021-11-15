@@ -1,22 +1,29 @@
 import React, { useState } from "react";
+import CurrentDate from "./CurrentDate";
+import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
 import "./Weather.css";
 
 
 
 
-export default function Weather(props) {
-const [city, setCity] = useState(props.defaultCity);
+export default function WeatherApp(props) {
 const [weatherData, setWeatherData] = useState({ ready: false });
-
+const [city, setCity] = useState(props.defaultCity);
 
 
 function handleResponse(response) {
   setWeatherData({
     ready: true,
     coordinates: response.data.coord,
-
-  })
+    city: response.data.name,
+    description: response.data.weather[0].description,
+    temperature: response.data.main.temp,
+    wind: response.data.wind.speed,
+    humidity: response.data.main.humidity,
+    icon: response.data.weather[0].icon,
+    date: new Date(response.data.dt * 1000),
+  });
 }
 
 /* function to search a city */
@@ -29,6 +36,8 @@ function handleCityDisplay(event) {
   //triggered by input button element or pressing Enter to search a city
   setCity(event.target.value)
 }
+
+
   /* pressing Enter or clicking Search button triggers function to get the weather data for the searched city using the OpenWeather API */
 function search() {
   const apiKey = "70de72ce25d0801c193edd1d17ced422";
@@ -40,35 +49,9 @@ function search() {
   axios.get(apiUrl).then(handleResponse);
 }
 
-  
-  return (
-    <div className="Weather">
-      
-        <div className="date-time">
-          <ul>
-            <li>
-            <div>Sunday 12:00 AM</div>
-            </li>
-          </ul>
-          
-        </div>
-        <div className="WeatherInfo">
-          <div className="row">
-          <h1>Seattle</h1>
-            <div>
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png"
-              alt="Light rain showers"
-              size={52}
-            />
-            </div>
-            <h2>Light rain showers</h2>
-            <div className="WeatherTemp">
-              <span className="temperature">46</span>
-              <span className="unit">°C</span>
-            </div>
-          </div>
-        </div>
+  if (weatherData.ready) {
+    return (
+    <div className="WeatherApp">
       <form onSubmit={handleSubmit}>
         <div className="row">
           <div className="col-9">
@@ -84,12 +67,26 @@ function search() {
             <input
               type="submit"
               value="Search"
-              className="btn btn-primary w-100"
+              className="btn btn-primary"
             />
           </div>
         </div>
       </form>
-      
+      <div className="date-time">
+        <ul>
+          <li>
+            <CurrentDate date={props.data.date} />
+          </li>
+        </ul>
+
+      </div>
+      < WeatherInfo />
+      <div className="WeatherForecast"></div>
     </div>
   );
+  } else {
+    search();
+    return "Looking outside for you... One second";
+  }
+  
 } 
