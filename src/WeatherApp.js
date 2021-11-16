@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import CurrentDate from "./CurrentDate";
 import WeatherInfo from "./WeatherInfo";
 import axios from "axios";
 import "./Weather.css";
@@ -13,14 +12,15 @@ const [city, setCity] = useState(props.defaultCity);
 
 
 function handleResponse(response) {
+  console.log(response.data);
   setWeatherData({
     ready: true,
     coordinates: response.data.coord,
     city: response.data.name,
-    description: response.data.weather[0].description,
     temperature: response.data.main.temp,
-    wind: response.data.wind.speed,
+    description: response.data.weather[0].description,
     humidity: response.data.main.humidity,
+    wind: response.data.wind.speed,
     icon: response.data.weather[0].icon,
     date: new Date(response.data.dt * 1000),
   });
@@ -41,10 +41,9 @@ function handleCityDisplay(event) {
   /* pressing Enter or clicking Search button triggers function to get the weather data for the searched city using the OpenWeather API */
 function search() {
   const apiKey = "70de72ce25d0801c193edd1d17ced422";
-
-  let units = "metric";
+  
   let apiUrl = 
-  `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+  `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(handleResponse);
 }
@@ -72,16 +71,7 @@ function search() {
           </div>
         </div>
       </form>
-      <div className="date-time">
-        <ul>
-          <li>
-            <CurrentDate date={props.data.date} />
-          </li>
-        </ul>
-
-      </div>
-      < WeatherInfo />
-      
+      < WeatherInfo data={weatherData} />
     </div>
   );
   } else {

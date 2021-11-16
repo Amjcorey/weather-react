@@ -15,7 +15,7 @@ export default function App() {
       <footer>
         Coded by Amanda Corey,{" "}
         <a
-          rel="noreferrer"
+          rel="noopener noreferrer"
           href="https://github.com/Amjcorey/weather-react" target="_blank">
           open-sourced
         </a>{" "}

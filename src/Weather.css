@@ -20,7 +20,7 @@
   text-transform: uppercase;
 }
 
-.WeatherApp .date-time {
+.WeatherApp .CurrentDate {
   font-size: 14px;
   background: #668a8a;
   color: white;
