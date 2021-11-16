@@ -9,12 +9,7 @@ export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
       <div className="CurrentDate">
-        <ul>
-          <li>
-            <FriendlyDate date={props.data.date} />
-          </li>
-        </ul>
-
+          <FriendlyDate date={props.data.date} />
       </div>
       <h1>{props.data.city}</h1>
       <div className="row">
@@ -23,10 +18,7 @@ export default function WeatherInfo(props) {
           <h4>{props.data.description}</h4>
         </div>
         <div className="col-6">
-          <div className="WeatherTemp">
-            <span className="temperature">{props.data.main.temp}</span>
-            <span className="unit">°C</span>
-          </div>
+          <DisplayTemp />
         </div>
         <hr />
         <div className="WeatherDetails">

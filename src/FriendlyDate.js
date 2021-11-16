@@ -2,7 +2,7 @@ import React from "react";
 
 export default function FriendlyDate(props) {
     let now = new Date();
-  
+
     let days = [
         "Sunday",
         "Monday",
@@ -12,8 +12,6 @@ export default function FriendlyDate(props) {
         "Friday",
         "Saturday"
     ];
-    
-
     let day = days[props.date.getDay()];
     let hours = props.date.getHours();
 
