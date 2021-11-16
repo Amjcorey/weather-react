@@ -18,7 +18,7 @@ export default function WeatherInfo(props) {
           <h4>{props.data.description}</h4>
         </div>
         <div className="col-6">
-          <DisplayTemp />
+          <DisplayTemp celsius={props.data.temperature} />
         </div>
         <hr />
         <div className="WeatherDetails">
