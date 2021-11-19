@@ -1,46 +1,48 @@
 .WeatherApp {
-  box-sizing: border-box;
-  border: 1px solid black;
-  border-radius: 18px;
-  max-width: 720px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.WeatherApp form {
-  display: block;
-  padding: 16px;
-}
-
-.WeatherApp ul {
-  list-style-type: none;
-}
-
-.WeatherApp h2 {
-  text-transform: uppercase;
+	box-sizing: border-box;
+	border: 2px solid #668a8a;
+	border-radius: 18px;
+	max-width: 720px;
+	margin: 0 auto;
+	text-align: center;
 }
 
 .WeatherApp .CurrentDate {
-  font-size: 14px;
-  background: #668a8a;
-  color: white;
-  line-height: 1.6;
+	font-size: 14px;
+	background: #668a8a;
+	color: white;
+	line-height: 1.6;
+	border-radius: 16px 16px 0 0;
 }
 
+.WeatherApp form {
+	display: block;
+	padding: 16px;
+}
 
-
-.WeatherApp .WeatherInfo {
-  padding: 20px;
+.WeatherApp .form-control {
+	display: block;
+	width: 100%;
 }
 
 .WeatherApp h1 {
-  font-size: 38px;
-  font-weight: 100;
+	font-size: 38px;
+	font-weight: 100;
 }
 
+.WeatherApp h2 {
+	text-transform: uppercase;
+}
 
+.WeatherApp ul {
+	list-style-type: none;
+}
 
-.WeatherApp .form-control {
-  display: block;
-  width: 100%;
+.WeatherApp .temperature {
+	font-size: 54px;
+	padding: 10px;
+}
+
+.WeatherApp .unit {
+	color: red;
 }
