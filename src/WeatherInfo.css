@@ -6,3 +6,7 @@
 .WeatherInfo {
 	padding: 20px;
 }
+
+.WeatherInfo .unit a {
+	color: var(--secondary-color);
+}
