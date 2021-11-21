@@ -1,3 +1,8 @@
+:root {
+	--primary-color: #668a8a;
+	--secondary-color: #dfadc6;
+}
+
 .WeatherApp {
 	box-sizing: border-box;
 	border: 2px solid #668a8a;
@@ -44,5 +49,5 @@
 }
 
 .WeatherApp .unit {
-	color: red;
+	color: black;
 }

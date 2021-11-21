@@ -1,3 +1,8 @@
+:root {
+	--primary-color: #668a8a;
+	--secondary-color: #dfadc6;
+}
+
 .WeatherInfo {
 	padding: 20px;
 }

@@ -3,7 +3,7 @@ import WeatherInfo from "./WeatherInfo";
 import FriendlyDate from "./FriendlyDate";
 import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
-import "./Weather.css";
+import "./WeatherApp.css";
 
 export default function WeatherApp(props) {
 	const [weatherData, setWeatherData] = useState({ loaded: false });
