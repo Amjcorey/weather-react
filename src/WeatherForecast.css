@@ -1,8 +1,23 @@
 .WeatherForecast {
 	text-align: center;
 	margin-bottom: 20px;
+	background: #faf7f5;
+	overflow: hidden;
 }
 
 .WeatherForecast .WeatherForecast-temperature-min {
 	opacity: 0.4;
+}
+
+.WeatherForecast .circle {
+	position: relative;
+	background: #faf7f5;
+	width: 700px;
+	height: 200px;
+	left: 50%;
+	margin-top: 10px;
+	box-shadow: -2px -2px 9px #7fadad;
+	transform: translateX(-50%);
+	border-radius: 50%;
+	clip-path: ellipse(50% auto);
 }

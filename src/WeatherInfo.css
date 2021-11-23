@@ -7,6 +7,20 @@
 	padding: 20px;
 }
 
+.WeatherInfo h1 {
+	margin-bottom: 40px;
+	font-size: 64px;
+	font-weight: 150;
+	color: #668a8a;
+}
+
 .WeatherInfo .unit a {
 	color: var(--secondary-color);
+}
+
+.WeatherInfo .current-icon-description {
+	text-transform: capitalize;
+	font-size: 15px;
+	font-weight: 350;
+	letter-spacing: -0.5px;
 }

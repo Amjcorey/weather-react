@@ -5,8 +5,9 @@
 
 .WeatherApp {
 	box-sizing: border-box;
-	border: 2px solid #668a8a;
+	border: 1px solid #668a8a;
 	border-radius: 18px;
+	background-color: #faf7f5;
 	max-width: 720px;
 	margin: 0 auto;
 	text-align: center;
@@ -23,20 +24,13 @@
 .WeatherApp form {
 	display: block;
 	padding: 16px;
+	background-color: #7fadad;
 }
 
 .WeatherApp .form-control {
 	display: block;
 	width: 100%;
-}
-
-.WeatherApp h1 {
-	font-size: 38px;
-	font-weight: 100;
-}
-
-.WeatherApp h2 {
-	text-transform: uppercase;
+	background: #faf7f5;
 }
 
 .WeatherApp ul {

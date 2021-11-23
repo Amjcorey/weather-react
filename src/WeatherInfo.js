@@ -14,12 +14,13 @@ export default function WeatherInfo(props) {
 						alt={props.data.description}
 						size={props.data.size}
 					/>
-					<h4>{props.data.description}</h4>
+					<p className="current-icon-description">{props.data.description}</p>
 				</div>
 				<div className="col-6">
 					<DisplayTemp celsius={props.data.temperature} />
 				</div>
 				<hr />
+				<div className="circle"></div>
 				<div className="WeatherDetails">
 					<div className="row">
 						<div className="col-4">Humidity: {props.data.humidity}%</div>
