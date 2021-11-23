@@ -15,7 +15,7 @@
 }
 
 .WeatherInfo .unit a {
-	color: var(--secondary-color);
+	color: var(--primary-color);
 }
 
 .WeatherInfo .current-icon-description {

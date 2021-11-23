@@ -9,10 +9,6 @@ export default function DisplayTemp(props) {
 				°
 				<a href="noopener" className="celsius-unit">
 					C
-				</a>{" "}
-				|{" "}
-				<a href="noopener" className="fahrenheit-unit">
-					F
 				</a>
 			</span>
 		</div>
