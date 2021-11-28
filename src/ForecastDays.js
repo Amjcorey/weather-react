@@ -14,11 +14,11 @@ export default function ForecastDays(props) {
 
 	function day() {
 		let date = new Date(props.data.dt * 1000);
-		day = date.getDay();
+		let forecastDays = date.getDay();
 
 		let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
 
-		return days[day];
+		return days[forecastDays];
 	}
 
 	return (
